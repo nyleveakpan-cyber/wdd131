@@ -1,13 +1,13 @@
-/* =========================================
-   WDD 131 - Picture Album
+```css
+/* WDD 131 - Temple Album
    temples-large.css
-   Large Screen Styles
-   ========================================= */
+*/
 
-
-/* ---------- Large Screen Header ---------- */
+/* ---------- Large Screens ---------- */
 
 @media screen and (min-width: 640px) {
+
+    /* ---------- Header ---------- */
 
     header {
         padding: 1rem 2rem;
@@ -22,7 +22,7 @@
         align-items: center;
     }
 
-    header h1 {
+    .site-title {
         font-size: 2.2rem;
         text-align: left;
     }
@@ -35,7 +35,7 @@
     }
 
 
-    /* ---------- Large Navigation ---------- */
+    /* ---------- Navigation ---------- */
 
     nav {
         display: flex;
@@ -51,8 +51,9 @@
         padding: 0.5rem;
     }
 
-    nav a:hover {
-        color: #f4a261;
+    nav a:hover,
+    nav a.active {
+        color: #ffd166;
         text-decoration: underline;
     }
 
@@ -65,7 +66,7 @@
         padding: 2rem;
     }
 
-    main h2 {
+    main h1 {
         font-size: 2rem;
         margin-bottom: 2rem;
     }
@@ -75,10 +76,7 @@
 
     .temple-grid {
         display: grid;
-
-        grid-template-columns:
-            repeat(3, 1fr);
-
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
     }
 
@@ -93,36 +91,27 @@
 
         border-radius: 8px;
 
-        box-shadow:
-            0 2px 8px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 
-        transition:
-            transform 0.2s ease,
-            box-shadow 0.2s ease;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     figure:hover {
         transform: translateY(-4px);
-
-        box-shadow:
-            0 5px 12px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
     }
 
     figure img {
         width: 100%;
         height: auto;
         display: block;
-
         border-radius: 5px;
     }
 
     figcaption {
         margin-top: 0.75rem;
-
         text-align: center;
-
         font-size: 1rem;
-
         color: #1f4e79;
     }
 
@@ -132,13 +121,10 @@
     footer {
         padding: 1.5rem;
     }
-
 }
 
 
-/* =========================================
-   EXTRA LARGE SCREENS
-   ========================================= */
+/* ---------- Extra Large Screens ---------- */
 
 @media screen and (min-width: 1000px) {
 
@@ -151,9 +137,7 @@
     }
 
     .temple-grid {
-        grid-template-columns:
-            repeat(3, 1fr);
-
+        grid-template-columns: repeat(3, 1fr);
         gap: 2.5rem;
     }
 
@@ -164,13 +148,10 @@
     figcaption {
         font-size: 1.05rem;
     }
-
 }
 
 
-/* =========================================
-   VERY LARGE SCREENS
-   ========================================= */
+/* ---------- Very Large Screens ---------- */
 
 @media screen and (min-width: 1400px) {
 
@@ -183,10 +164,7 @@
     }
 
     .temple-grid {
-        grid-template-columns:
-            repeat(3, 1fr);
-
+        grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
     }
-
 }
